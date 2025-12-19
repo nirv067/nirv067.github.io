@@ -12,20 +12,20 @@ export function StatsShowcase() {
     },
     {
       icon: Zap,
-      value: "20+",
-      label: "Critical Systems Owned",
+      value: "Production",
+      label: "Systems Owned",
       description: "From design to production stability",
     },
     {
       icon: Layers,
       value: "2",
-      label: "Industries Mastered",
+      label: "Industries",
       description: "EdTech and AgriTech platforms",
     },
   ]
 
   return (
-    <section className="py-16 px-6 relative bg-card/50" aria-label="Career statistics" role="region">
+    <section className="py-16 px-4 sm:px-6 relative bg-card/50" aria-label="Career statistics" role="region">
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => {
@@ -33,7 +33,7 @@ export function StatsShowcase() {
             return (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-border/50 bg-background hover:bg-card hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group"
+                className="p-6 rounded-xl border border-border/50 bg-background hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group"
                 role="article"
                 aria-label={`${stat.value} ${stat.label}`}
               >

@@ -4,7 +4,7 @@ export function CaseStudies() {
   return (
     <section
       id="case-studies"
-      className="min-h-screen flex items-center justify-center px-6 py-20 bg-secondary/30 relative"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 bg-secondary/30 relative"
     >
       <div className="max-w-5xl w-full">
         <div className="space-y-16">
@@ -40,7 +40,8 @@ export function CaseStudies() {
                 <p className="text-base text-foreground leading-relaxed">
                   Served as primary technical owner for the core platform, responsible for backend architecture, system
                   reliability, and scalable growth. Led modernization of a legacy PHP/HTML monolith into a Node.js and
-                  React modular architecture, improving maintainability and deployment safety.
+                  React modular architecture to improve deployment safety, enable independent module releases, and reduce
+                  technical debt.
                 </p>
               </div>
 
@@ -121,8 +122,8 @@ export function CaseStudies() {
                   <li className="flex gap-3">
                     <span className="text-accent mt-1">→</span>
                     <span>
-                      Automated internal sample processing workflows, eliminating manual handoffs and significantly
-                      improving turnaround time
+                      Automated internal sample processing workflows, eliminating manual handoffs and reducing manual
+                      effort while improving turnaround time
                     </span>
                   </li>
                   <li className="flex gap-3">
@@ -154,8 +155,14 @@ export function CaseStudies() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-foreground flex items-center gap-3">
               <span className="w-1 h-6 bg-accent rounded-full"></span>
-              Other Roles
+              Independent / Contract Consulting (Transition Phase)
             </h3>
+
+            <div className="mb-4">
+              <p className="text-sm text-muted-foreground italic pl-4">
+                Dec 2024 – Present • Planned transition phase with selective technical consulting engagements
+              </p>
+            </div>
 
             <div className="space-y-4 pl-4 border-l-2 border-accent/30 hover:border-accent/50 transition-colors">
               <div>
@@ -181,8 +188,8 @@ export function CaseStudies() {
                   Technical Product Owner (Engineering-Focused) • Gurugram, India
                 </p>
                 <p className="text-sm text-foreground leading-relaxed">
-                  Owned delivery of selected platform modules with responsibility for technical execution and system
-                  stability.
+                  Short-term engagement owning delivery of selected platform modules with responsibility for technical
+                  execution and system stability.
                 </p>
               </div>
 
@@ -200,17 +207,54 @@ export function CaseStudies() {
                 </p>
               </div>
 
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h3 className="text-xl font-bold text-foreground flex items-center gap-3">
+              <span className="w-1 h-6 bg-accent rounded-full"></span>
+              Early Career
+            </h3>
+
+            <div className="space-y-4 pl-4 border-l-2 border-accent/30 hover:border-accent/50 transition-colors">
               <div>
                 <div className="flex items-baseline gap-3 flex-wrap mb-1">
                   <h4 className="text-lg font-semibold text-foreground">BlackLight Studio Works & Others</h4>
-                  <span className="text-sm text-accent font-semibold">2016 – 2017</span>
+                  <span className="text-sm text-accent font-semibold">Dec 2016 – Dec 2017</span>
                 </div>
                 <p className="text-base text-muted-foreground mb-2">
-                  Software Engineer (Early Career) • Noida / Faridabad, India
+                  Web Developer • Noida / Faridabad, India
                 </p>
                 <p className="text-sm text-foreground leading-relaxed">
                   Developed full-stack web applications using Angular, Java, PHP, JavaScript, HTML, and CSS. Built
                   internal CRM systems, reusable UI components, and third-party API integrations.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-baseline gap-3 flex-wrap mb-1">
+                  <h4 className="text-lg font-semibold text-foreground">Agilist Technologies</h4>
+                  <span className="text-sm text-accent font-semibold">Jan 2016 – Nov 2016</span>
+                </div>
+                <p className="text-base text-muted-foreground mb-2">
+                  Engineer Intern / Web Developer Trainee • India
+                </p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  Internship and training period developing web applications and learning professional software
+                  development practices.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-baseline gap-3 flex-wrap mb-1">
+                  <h4 className="text-lg font-semibold text-foreground">Metazone</h4>
+                  <span className="text-sm text-accent font-semibold">Jul 2014 – Feb 2015</span>
+                </div>
+                <p className="text-base text-muted-foreground mb-2">
+                  Trainee (Part-time) • India
+                </p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  Early exposure to software development lifecycle and web technologies during diploma studies.
                 </p>
               </div>
             </div>

@@ -44,17 +44,17 @@ export function GetInTouch() {
   ]
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20 relative">
+    <section id="contact" className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 relative">
       <div className="max-w-4xl w-full">
         <div className="space-y-12">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Let's Build Something Great</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get In Touch</h2>
             <div className="flex justify-center mb-6">
               <div className="w-12 h-1 bg-accent rounded-full"></div>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Looking for a senior backend engineer who can own platform systems and deliver production-ready solutions?
-              Let's talk.
+              Open to senior backend and platform engineering opportunities. Available for roles focused on production
+              systems, architecture, and technical ownership.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export function GetInTouch() {
                           >
                             <method.icon className="h-5 w-5 mr-3 group-hover/inner:scale-110 transition-transform" />
                             <div className="text-left">
-                              <div className="font-semibold text-foreground">{method.label}</div>
+                              <div className="font-semibold text-foreground group-hover/inner:text-accent-foreground">{method.label}</div>
                               <div className="text-sm text-muted-foreground group-hover/inner:text-accent-foreground/80">
                                 {method.value}
                               </div>
@@ -111,8 +111,8 @@ export function GetInTouch() {
                         rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       >
                         <Button
-                          variant="outline"
-                          className="group/btn bg-card/50 border-border/50 hover:bg-accent hover:text-accent-foreground"
+                          variant="outline-accent"
+                          className="group/btn"
                         >
                           <method.icon className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                           {method.label}
@@ -129,7 +129,7 @@ export function GetInTouch() {
                     <p className="text-sm text-muted-foreground">Open to remote and hybrid opportunities</p>
                   </div>
                   <a href="https://wa.me/919711445587" target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="group bg-primary hover:bg-accent text-primary-foreground">
+                    <Button size="lg" className="group bg-primary hover:bg-accent text-primary-foreground hover:text-accent-foreground">
                       <MessageCircle className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
                       Message on WhatsApp
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

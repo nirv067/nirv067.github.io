@@ -44,7 +44,7 @@ export function WhatIDo() {
   return (
     <section
       id="what-i-do"
-      className="min-h-screen flex items-center justify-center px-6 py-20 relative"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 relative"
       role="region"
       aria-label="My journey and capabilities"
     >

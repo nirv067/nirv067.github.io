@@ -35,7 +35,7 @@ export function Contact() {
               <div>
                 <h3 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">LinkedIn</h3>
                 <a
-                  href="https://linkedin.com/in/neerajsingh"
+                  href="https://www.linkedin.com/in/neeraj-singh-majestic-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-foreground hover:text-accent transition-colors"
@@ -46,7 +46,7 @@ export function Contact() {
               <div>
                 <h3 className="text-sm font-semibold text-accent uppercase tracking-wide mb-2">GitHub</h3>
                 <a
-                  href="https://github.com/neerajsingh"
+                  href="https://github.com/nirv067"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-foreground hover:text-accent transition-colors"
@@ -57,7 +57,7 @@ export function Contact() {
             </div>
           </Card>
           <div className="text-center pt-8">
-            <p className="text-sm text-muted-foreground">© 2025 Neeraj Singh. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 Neeraj. All rights reserved.</p>
           </div>
         </div>
       </div>

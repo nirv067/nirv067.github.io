@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-24 sm:pt-20 relative overflow-hidden"
       role="region"
       aria-label="Hero section"
     >
@@ -35,7 +35,7 @@ export function Hero() {
               <span className="text-sm text-accent font-medium">Welcome to my journey</span>
             </div>
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight text-balance animate-slide-up"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight text-balance animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
               Hi, I'm <span className="text-accent">Neeraj</span>
@@ -43,18 +43,18 @@ export function Hero() {
           </div>
 
           <p
-            className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl text-pretty animate-slide-up"
+            className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl text-pretty animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
             Let me walk you through 9+ years of building scalable backend systems, securing platforms, and automating
             operations. From EdTech to AgriTech, I've owned systems that power businesses.
           </p>
 
-          <div className="pt-4 animate-slide-up flex flex-wrap gap-4" style={{ animationDelay: "0.3s" }}>
+          <div className="pt-4 animate-slide-up flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" style={{ animationDelay: "0.3s" }}>
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="group bg-accent hover:bg-primary text-accent-foreground"
+              className="group bg-accent hover:bg-primary text-accent-foreground w-full sm:w-auto"
               aria-label="Scroll to contact section"
             >
               <MessageCircle className="mr-2 h-4 w-4" aria-hidden="true" />
@@ -63,9 +63,9 @@ export function Hero() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
+              variant="outline-accent"
               onClick={() => scrollToSection("what-i-do")}
-              className="group border-accent/50 hover:border-accent text-foreground"
+              className="group w-full sm:w-auto"
               aria-label="Scroll to my journey section"
             >
               Explore My Journey

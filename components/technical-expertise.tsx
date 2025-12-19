@@ -5,29 +5,33 @@ import { CheckCircle2 } from "lucide-react"
 export function TechnicalExpertise() {
   const expertise = [
     {
-      category: "Backend & Platform Engineering",
-      skills: "Node.js, JavaScript/TypeScript, Python, REST APIs, Microservices, System Design",
+      category: "Backend & APIs",
+      skills: "Node.js, JavaScript/TypeScript, Python, FastAPI, Django, REST APIs, Microservices, System Design",
     },
     {
-      category: "Security & Access Control",
-      skills: "RBAC, ABAC, JWT, OAuth 2.0, Single Sign-On (SSO), Multi-Factor Authentication (MFA)",
+      category: "Databases",
+      skills: "PostgreSQL, MySQL, Redis, MongoDB",
     },
     {
       category: "Architecture & Messaging",
-      skills: "Event-Driven Architecture, Asynchronous Processing, Apache Kafka (working exposure)",
+      skills: "Event-Driven Architecture, Asynchronous Processing, Apache Kafka, NATS (working exposure)",
     },
     {
-      category: "Frontend (Earlier Experience)",
+      category: "Cloud & DevOps",
+      skills: "Docker, CI/CD, AWS, GCP (working exposure)",
+    },
+    {
+      category: "Security & Access Control",
+      skills: "JWT, OAuth 2.0, Single Sign-On (SSO), Multi-Factor Authentication (MFA), RBAC, ABAC",
+    },
+    {
+      category: "Frontend",
       skills: "React, Next.js, Angular",
-    },
-    {
-      category: "Databases & Delivery",
-      skills: "PostgreSQL, MySQL, MongoDB, Docker, CI/CD, Cloud (AWS/GCP – working exposure)",
     },
   ]
 
   return (
-    <section id="technical-expertise" className="min-h-screen flex items-center justify-center px-6 py-20 relative">
+    <section id="technical-expertise" className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-20 relative">
       <div className="max-w-5xl w-full">
         <div className="space-y-12">
           <div>
@@ -43,7 +47,7 @@ export function TechnicalExpertise() {
             {expertise.map((item, index) => (
               <div
                 key={index}
-                className="p-6 border border-border/50 rounded-xl hover:bg-card/50 hover:border-accent/50 transition-all duration-300 group hover:-translate-y-1"
+                className="p-6 border border-border/50 rounded-xl hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 group hover:-translate-y-1"
               >
                 <div className="grid md:grid-cols-3 gap-4 items-start">
                   <div className="flex items-start gap-3">
