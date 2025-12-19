@@ -7,7 +7,7 @@ export function StatsShowcase() {
     {
       icon: BarChart3,
       value: "9+",
-      label: "Years of Backend Engineering",
+      label: "Years of Experience",
       description: "Solving complex production challenges",
     },
     {
