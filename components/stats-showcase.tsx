@@ -92,7 +92,7 @@ function StatCard({ stat }: { stat: Stat }) {
       ref={ref}
       className="p-6 rounded-xl border border-border/50 bg-background hover:bg-accent/5 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/10 group"
       role="article"
-      aria-label={`${stat.target}${stat.suffix} ${stat.label}`}
+      aria-label={`${stat.prefix ?? ""}${stat.target}${stat.suffix} ${stat.label}`}
     >
       <Icon className="w-8 h-8 text-accent mb-3 group-hover:scale-110 transition-transform" aria-hidden="true" />
       <div className="text-4xl font-bold text-accent mb-2 tabular-nums">

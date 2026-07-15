@@ -4,10 +4,19 @@ import { useState, useEffect } from "react"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { useTheme } from "@/components/theme-provider"
 
+const navItems = [
+  { id: "what-i-do", label: "Journey" },
+  { id: "solutions", label: "Solutions" },
+  { id: "case-studies", label: "Experience" },
+  { id: "technical-expertise", label: "Expertise" },
+  { id: "education", label: "Education" },
+]
+
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>("")
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
@@ -20,6 +29,25 @@ export function Navigation() {
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter((el): el is HTMLElement => el !== null)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting)
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id)
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
   }, [])
 
   // Lock body scroll when mobile menu is open
@@ -41,14 +69,6 @@ export function Navigation() {
       setIsMobileMenuOpen(false)
     }
   }
-
-  const navItems = [
-    { id: "what-i-do", label: "Journey" },
-    { id: "solutions", label: "Solutions" },
-    { id: "case-studies", label: "Experience" },
-    { id: "technical-expertise", label: "Expertise" },
-    { id: "education", label: "Education" },
-  ]
 
   return (
     <>
@@ -74,11 +94,18 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors relative group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent rounded px-2 py-1"
+                  className={`text-sm transition-colors relative group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent rounded px-2 py-1 ${
+                    activeSection === item.id ? "text-accent" : "text-muted-foreground hover:text-accent"
+                  }`}
                   aria-label={`Go to ${item.label} section`}
+                  aria-current={activeSection === item.id ? "true" : undefined}
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                  <span
+                    className={`absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                      activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  ></span>
                 </button>
               ))}
 
@@ -160,8 +187,13 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 text-base text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent"
+                className={`block w-full text-left px-4 py-3 text-base rounded-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent ${
+                  activeSection === item.id
+                    ? "text-accent bg-accent/10"
+                    : "text-muted-foreground hover:text-accent hover:bg-accent/10"
+                }`}
                 aria-label={`Go to ${item.label} section`}
+                aria-current={activeSection === item.id ? "true" : undefined}
               >
                 {item.label}
               </button>

@@ -8,6 +8,7 @@ import { Education } from "@/components/education"
 import { Philosophy } from "@/components/philosophy"
 import { GetInTouch } from "@/components/get-in-touch"
 import { Navigation } from "@/components/navigation"
+import { BackToTop } from "@/components/back-to-top"
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Education />
       <Philosophy />
       <GetInTouch />
+      <BackToTop />
     </main>
   )
 }

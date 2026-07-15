@@ -73,14 +73,13 @@ export function TechnicalExpertise() {
 
           <div
             className="flex flex-wrap gap-2"
-            role="tablist"
+            role="group"
             aria-label="Filter technical skills by category"
           >
             {["All", ...categories.map((c) => c.name)].map((name) => (
               <button
                 key={name}
-                role="tab"
-                aria-selected={active === name}
+                aria-pressed={active === name}
                 onClick={() => setActive(name)}
                 className={`text-sm font-medium px-3.5 py-1.5 rounded-full border transition-all duration-200 focus-visible:ring-2 focus-visible:ring-accent ${
                   active === name

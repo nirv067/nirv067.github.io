@@ -13,13 +13,17 @@ const ROLES = [
 
 export function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (prefersReducedMotion || paused) return
+
     const interval = setInterval(() => {
       setRoleIndex((i) => (i + 1) % ROLES.length)
     }, 2600)
     return () => clearInterval(interval)
-  }, [])
+  }, [paused])
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
@@ -58,16 +62,34 @@ export function Hero() {
               Hi, I'm <span className="text-accent">Neeraj</span>
             </h1>
             <div
-              className="h-8 sm:h-9 flex items-center overflow-hidden animate-slide-up"
+              className="flex flex-col gap-2 animate-slide-up"
               style={{ animationDelay: "0.15s" }}
-              aria-live="polite"
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+              onFocus={() => setPaused(true)}
+              onBlur={() => setPaused(false)}
             >
-              <span
-                key={roleIndex}
-                className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground animate-slide-up"
-              >
-                {ROLES[roleIndex]}
-              </span>
+              <div className="h-8 sm:h-9 flex items-center overflow-hidden" aria-live="polite">
+                <span
+                  key={roleIndex}
+                  className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground animate-slide-up"
+                >
+                  {ROLES[roleIndex]}
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5" role="group" aria-label="Select role to display">
+                {ROLES.map((role, i) => (
+                  <button
+                    key={role}
+                    onClick={() => setRoleIndex(i)}
+                    className={`h-1.5 rounded-full transition-all duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent ${
+                      i === roleIndex ? "w-6 bg-accent" : "w-1.5 bg-border hover:bg-accent/50"
+                    }`}
+                    aria-label={`Show role: ${role}`}
+                    aria-current={i === roleIndex}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
