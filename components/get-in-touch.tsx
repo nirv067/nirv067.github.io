@@ -141,7 +141,7 @@ export function GetInTouch() {
           </Card>
 
           <div className="text-center pt-8">
-            <p className="text-sm text-muted-foreground">© 2025 Neeraj. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2026 Neeraj. All rights reserved.</p>
           </div>
         </div>
       </div>

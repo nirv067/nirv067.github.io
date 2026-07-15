@@ -2,8 +2,25 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, MessageCircle } from "lucide-react"
+import { useEffect, useState } from "react"
+
+const ROLES = [
+  "Full-Stack & Distributed Systems Engineer",
+  "Platform & Backend Architecture Lead",
+  "Security-First Systems Builder",
+  "AI-Driven Product Engineer",
+]
 
 export function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((i) => (i + 1) % ROLES.length)
+    }, 2600)
+    return () => clearInterval(interval)
+  }, [])
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
   }
@@ -40,14 +57,27 @@ export function Hero() {
             >
               Hi, I'm <span className="text-accent">Neeraj</span>
             </h1>
+            <div
+              className="h-8 sm:h-9 flex items-center overflow-hidden animate-slide-up"
+              style={{ animationDelay: "0.15s" }}
+              aria-live="polite"
+            >
+              <span
+                key={roleIndex}
+                className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground animate-slide-up"
+              >
+                {ROLES[roleIndex]}
+              </span>
+            </div>
           </div>
 
           <p
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl text-pretty animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Let me walk you through 9+ years of building scalable backend systems, securing platforms, and automating
-            operations. From EdTech to AgriTech, I've owned systems that power businesses.
+            10+ years designing and scaling production systems across EdTech, AgriTech, and cybersecurity/AI. I've led
+            teams of up to 12, owned platforms serving 10,000+ daily users, and automated workflows that cut cycle
+            times by 75%.
           </p>
 
           <div className="pt-4 animate-slide-up flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" style={{ animationDelay: "0.3s" }}>

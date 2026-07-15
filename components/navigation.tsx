@@ -47,6 +47,7 @@ export function Navigation() {
     { id: "solutions", label: "Solutions" },
     { id: "case-studies", label: "Experience" },
     { id: "technical-expertise", label: "Expertise" },
+    { id: "education", label: "Education" },
   ]
 
   return (

@@ -13,7 +13,7 @@ export function Philosophy() {
               creating a solid foundation that others can build upon.
             </p>
             <p className="text-muted-foreground">
-              With 9+ years of hands-on experience, Neeraj has learned that the best solutions come from deeply
+              With 10+ years of hands-on experience, Neeraj has learned that the best solutions come from deeply
               understanding the problem, collaborating across teams, and choosing boring, proven technologies over
               flashy trends.
             </p>

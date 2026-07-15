@@ -6,34 +6,44 @@ import { CheckCircle2 } from "lucide-react"
 export function SolutionsProvided() {
   const solutions = [
     {
-      problem: "Manual operational bottlenecks costing hours daily",
-      solution: "I automated end-to-end sample processing workflows at FarMart",
-      impact: "Eliminated manual handoffs between teams, reduced manual effort and improved turnaround time",
+      problem: "10–12 day GST filing & procurement cycle",
+      solution: "I automated GST filing, invoicing, and PO/SO workflows at FarMart",
+      impact: "Queue-based background workers cut end-to-end cycle time to 2–3 days — a ~75% reduction",
     },
     {
-      problem: "Security vulnerabilities and access control gaps",
-      solution: "I implemented comprehensive security layers at Edustoke",
-      impact: "Deployed JWT authentication, OAuth 2.0 SSO, MFA for privileged roles, and RBAC/ABAC across workflows",
+      problem: "20+ hours of manual PO creation per cycle",
+      solution: "I automated the API-driven PO flow from sample collection to final order",
+      impact: "Added rate-limiting and retry logic for third-party integrations, saving ~20 hours per cycle",
     },
     {
-      problem: "Legacy PHP monolith hindering feature delivery",
-      solution: "I migrated Edustoke's core platform to Node.js + React",
-      impact: "Needed to improve deployment safety and enable independent module releases. Improved maintainability and reduced deployment risk",
+      problem: "Manual, unauditable incident report filing",
+      solution: "I own the AI-based FIR filing workflow at Unifymark",
+      impact: "Automated report submission end-to-end with JWT/RBAC-secured background job processing",
     },
     {
-      problem: "Disconnected internal systems and data silos",
-      solution: "I built integrated operational platforms at Edustoke",
-      impact: "Delivered LMS, CMS, internal CRM, and admin dashboards with real-time analytics to unify workflows",
+      problem: "10,000–15,000 daily users straining core dashboards",
+      solution: "I introduced Redis caching and indexing on high-read endpoints at Edustoke",
+      impact: "Reduced query latency on core dashboards while sustaining ~2,000 leads processed per day",
     },
     {
-      problem: "API performance and reliability issues under load",
-      solution: "I optimized production APIs at FarMart",
-      impact: "Applied query optimization, async processing, and structured error handling to improve scalability",
+      problem: "Undifferentiated access across 75+ internal staff",
+      solution: "I designed RBAC across admin platforms at Edustoke",
+      impact: "Supported 40+ counselors, 25+ lead verifiers, and 10+ finance/ops staff with tailored permissions",
     },
     {
-      problem: "Scaling challenges with synchronous workflows",
-      solution: "I designed event-driven architecture at FarMart",
-      impact: "Implemented async processing and Kafka-based messaging for decoupled, resilient operations",
+      problem: "Legacy PHP/Sails.js monolith slowing releases",
+      solution: "I migrated Edustoke's platform to React, Next.js, and microservices",
+      impact: "Introduced CI/CD and Docker deployments, improving release velocity and maintainability",
+    },
+    {
+      problem: "Concurrent load across EDR/XDR data ingestion",
+      solution: "I implemented Redis caching and rate-limiting at Unifymark",
+      impact: "Sustained reliable throughput across security data pipelines under concurrent load",
+    },
+    {
+      problem: "Regulated-sector clients needing on-premise deployment",
+      solution: "I containerized and shipped secure document storage with Docker & Kubernetes",
+      impact: "Delivered client-premise deployments with CI/CD and Nginx configured per environment",
     },
   ]
 
@@ -50,7 +60,7 @@ export function SolutionsProvided() {
               <div className="w-12 h-1 bg-accent rounded-full"></div>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Real production problems I've owned and solved
+              Real production problems I've owned and solved, with measurable impact
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
