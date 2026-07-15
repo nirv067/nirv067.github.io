@@ -1,0 +1,10 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nirv067-portfolio:latest
+    container_name: nirv067-portfolio
+    ports:
+      - "8080:80"
+    restart: unless-stopped
