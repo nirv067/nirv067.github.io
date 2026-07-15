@@ -9,9 +9,9 @@ const geistSans = Geist({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Neeraj | Senior Full-Stack Engineer – Backend & Platform Systems",
+  title: "Neeraj | Senior Full-Stack Engineer – Backend, Platform & Security Systems",
   description:
-    "Senior Full-Stack Engineer with 9+ years owning production backend systems, platform engineering, and scalable architecture. Node.js, Python, PostgreSQL, AWS/GCP expertise.",
+    "Senior Full-Stack Engineer with 10+ years owning production backend systems, platform engineering, and cybersecurity/AI products. Node.js, React, PostgreSQL, Redis, Kafka, AWS expertise.",
   keywords: [
     "full-stack engineer",
     "backend engineer",
@@ -19,13 +19,16 @@ export const metadata: Metadata = {
     "Node.js developer",
     "Python developer",
     "PostgreSQL",
+    "Redis",
+    "Kafka",
     "AWS",
-    "GCP",
     "system architecture",
     "production systems",
     "scalable backend",
     "React developer",
     "senior software engineer",
+    "cybersecurity engineer",
+    "AI automation",
   ],
   authors: [{ name: "Neeraj" }],
   creator: "Neeraj",
@@ -34,9 +37,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png?v=2",
   },
   openGraph: {
-    title: "Neeraj | Senior Full-Stack Engineer – Backend & Platform Systems",
+    title: "Neeraj | Senior Full-Stack Engineer – Backend, Platform & Security Systems",
     description:
-      "Senior Full-Stack Engineer with 9+ years owning production backend systems, platform engineering, and scalable architecture. Node.js, Python, PostgreSQL, AWS/GCP expertise.",
+      "Senior Full-Stack Engineer with 10+ years owning production backend systems, platform engineering, and cybersecurity/AI products. Node.js, React, PostgreSQL, Redis, Kafka, AWS expertise.",
     url: "https://nirv067.github.io",
     siteName: "Neeraj Portfolio",
     locale: "en_US",
@@ -52,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neeraj | Senior Full-Stack Engineer – Backend & Platform Systems",
+    title: "Neeraj | Senior Full-Stack Engineer – Backend, Platform & Security Systems",
     description:
-      "Senior Full-Stack Engineer with 9+ years owning production backend systems, platform engineering, and scalable architecture. Node.js, Python, PostgreSQL, AWS/GCP expertise.",
+      "Senior Full-Stack Engineer with 10+ years owning production backend systems, platform engineering, and cybersecurity/AI products. Node.js, React, PostgreSQL, Redis, Kafka, AWS expertise.",
     images: ["/og-image.png"],
   },
   metadataBase: new URL("https://nirv067.github.io"),
@@ -91,7 +94,7 @@ export default function RootLayout({
               name: "Neeraj",
               jobTitle: "Senior Full-Stack Engineer",
               description:
-                "Senior Full-Stack Engineer specializing in backend systems, platform engineering, and production ownership",
+                "Senior Full-Stack Engineer specializing in backend systems, platform engineering, cybersecurity/AI products, and production ownership",
               url: "https://nirv067.github.io",
               sameAs: [
                 "https://www.linkedin.com/in/neeraj-singh-majestic-dev",
@@ -103,11 +106,14 @@ export default function RootLayout({
                 "Node.js",
                 "Python",
                 "PostgreSQL",
+                "Redis",
+                "Kafka",
                 "AWS",
-                "GCP",
                 "System Architecture",
                 "Full-Stack Development",
                 "React",
+                "Cybersecurity",
+                "AI-Driven Automation",
               ],
             }),
           }}

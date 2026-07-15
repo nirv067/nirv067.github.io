@@ -16,8 +16,8 @@ export function GetInTouch() {
     {
       icon: Mail,
       label: "Email",
-      value: "nirv067@gmail.com",
-      href: "mailto:nirv067@gmail.com",
+      value: "neeraj.chanderhash@gmail.com",
+      href: "mailto:neeraj.chanderhash@gmail.com",
       primary: true,
     },
     {
@@ -141,7 +141,7 @@ export function GetInTouch() {
           </Card>
 
           <div className="text-center pt-8">
-            <p className="text-sm text-muted-foreground">© 2025 Neeraj. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2026 Neeraj. All rights reserved.</p>
           </div>
         </div>
       </div>

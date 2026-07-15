@@ -2,8 +2,29 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, MessageCircle } from "lucide-react"
+import { useEffect, useState } from "react"
+
+const ROLES = [
+  "Full-Stack & Distributed Systems Engineer",
+  "Platform & Backend Architecture Lead",
+  "Security-First Systems Builder",
+  "AI-Driven Product Engineer",
+]
 
 export function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (prefersReducedMotion || paused) return
+
+    const interval = setInterval(() => {
+      setRoleIndex((i) => (i + 1) % ROLES.length)
+    }, 2600)
+    return () => clearInterval(interval)
+  }, [paused])
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
   }
@@ -40,14 +61,50 @@ export function Hero() {
             >
               Hi, I'm <span className="text-accent">Neeraj</span>
             </h1>
+            <div
+              className="flex flex-col gap-2 animate-slide-up"
+              style={{ animationDelay: "0.15s" }}
+              onMouseEnter={() => setPaused(true)}
+              onMouseLeave={() => setPaused(false)}
+              onFocus={() => setPaused(true)}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                  setPaused(false)
+                }
+              }}
+            >
+              <div className="h-8 sm:h-9 flex items-center overflow-hidden" aria-live="polite">
+                <span
+                  key={roleIndex}
+                  className="text-lg sm:text-xl md:text-2xl font-semibold text-muted-foreground animate-slide-up"
+                >
+                  {ROLES[roleIndex]}
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5" role="group" aria-label="Select role to display">
+                {ROLES.map((role, i) => (
+                  <button
+                    key={role}
+                    type="button"
+                    onClick={() => setRoleIndex(i)}
+                    className={`h-1.5 rounded-full transition-all duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent ${
+                      i === roleIndex ? "w-6 bg-accent" : "w-1.5 bg-border hover:bg-accent/50"
+                    }`}
+                    aria-label={`Show role: ${role}`}
+                    aria-current={i === roleIndex}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           <p
             className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl text-pretty animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Let me walk you through 9+ years of building scalable backend systems, securing platforms, and automating
-            operations. From EdTech to AgriTech, I've owned systems that power businesses.
+            10+ years designing and scaling production systems across EdTech, AgriTech, and cybersecurity/AI. I've led
+            teams of up to 12, owned platforms serving 10,000+ daily users, and automated workflows that cut cycle
+            times by 75%.
           </p>
 
           <div className="pt-4 animate-slide-up flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4" style={{ animationDelay: "0.3s" }}>

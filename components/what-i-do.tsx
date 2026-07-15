@@ -12,32 +12,32 @@ export function WhatIDo() {
     },
     {
       icon: Shield,
-      title: "Security-First Systems",
+      title: "Security & AI Products",
       description:
-        "JWT, OAuth 2.0, SSO, MFA, RBAC/ABAC—I implement security layers that don't compromise on user experience.",
+        "JWT, OAuth 2.0, RBAC, and AI-driven automation—I've shipped EDR, XDR, and AI-based compliance products for regulated clients.",
     },
     {
       icon: Zap,
       title: "Workflow Automation",
       description:
-        "I eliminate manual processes through intelligent automation, freeing teams to focus on strategic work.",
+        "I eliminate manual processes through intelligent automation—cutting a 10-12 day GST filing cycle down to 2-3 days.",
     },
     {
       icon: Database,
       title: "Event-Driven Architecture",
-      description: "Scalable async systems with Kafka-based messaging for decoupled, resilient operations at scale.",
+      description: "Scalable async systems with Kafka-based messaging and queue-based workers for decoupled, resilient operations at scale.",
     },
     {
       icon: Users,
-      title: "Cross-Team Leadership",
+      title: "Team & Delivery Leadership",
       description:
-        "Mentoring developers, establishing engineering standards, and being the technical escalation point.",
+        "Led delivery teams of up to 12 engineers—sprint planning, mentoring, code review, and being the technical escalation point.",
     },
     {
       icon: CheckCircle,
       title: "Production Reliability",
       description:
-        "API optimization, query tuning, structured error handling, and monitoring that keeps systems running.",
+        "Redis caching, query tuning, structured error handling, and monitoring that kept platforms serving 10,000+ daily users stable.",
     },
   ]
 
