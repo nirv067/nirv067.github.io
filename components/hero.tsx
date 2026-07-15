@@ -67,7 +67,11 @@ export function Hero() {
               onMouseEnter={() => setPaused(true)}
               onMouseLeave={() => setPaused(false)}
               onFocus={() => setPaused(true)}
-              onBlur={() => setPaused(false)}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                  setPaused(false)
+                }
+              }}
             >
               <div className="h-8 sm:h-9 flex items-center overflow-hidden" aria-live="polite">
                 <span
@@ -81,6 +85,7 @@ export function Hero() {
                 {ROLES.map((role, i) => (
                   <button
                     key={role}
+                    type="button"
                     onClick={() => setRoleIndex(i)}
                     className={`h-1.5 rounded-full transition-all duration-300 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent ${
                       i === roleIndex ? "w-6 bg-accent" : "w-1.5 bg-border hover:bg-accent/50"

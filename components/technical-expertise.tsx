@@ -49,6 +49,8 @@ const categories: Category[] = [
   },
 ]
 
+const categoryNames = ["All", ...categories.map((c) => c.name)]
+
 export function TechnicalExpertise() {
   const [active, setActive] = useState<string>("All")
 
@@ -76,9 +78,10 @@ export function TechnicalExpertise() {
             role="group"
             aria-label="Filter technical skills by category"
           >
-            {["All", ...categories.map((c) => c.name)].map((name) => (
+            {categoryNames.map((name) => (
               <button
                 key={name}
+                type="button"
                 aria-pressed={active === name}
                 onClick={() => setActive(name)}
                 className={`text-sm font-medium px-3.5 py-1.5 rounded-full border transition-all duration-200 focus-visible:ring-2 focus-visible:ring-accent ${

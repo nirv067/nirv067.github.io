@@ -131,14 +131,18 @@ function ExperienceCard({ exp, index }: { exp: Experience; index: number }) {
       {hasBullets && (
         <div className="relative z-10">
           <button
+            type="button"
             onClick={() => setOpen((o) => !o)}
             className="flex items-center gap-2 text-sm font-semibold text-accent hover:underline focus-visible:ring-2 focus-visible:ring-accent rounded"
             aria-expanded={open}
+            aria-controls={`exp-details-${index}`}
           >
             {open ? "Hide details" : `Show ${exp.bullets.length} key deliverables`}
             <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
           </button>
           <div
+            id={`exp-details-${index}`}
+            aria-hidden={!open}
             className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}
           >
             <div className="overflow-hidden">
