@@ -16,8 +16,8 @@ export function GetInTouch() {
     {
       icon: Mail,
       label: "Email",
-      value: "nirv067@gmail.com",
-      href: "mailto:nirv067@gmail.com",
+      value: "neeraj.chanderhash@gmail.com",
+      href: "mailto:neeraj.chanderhash@gmail.com",
       primary: true,
     },
     {

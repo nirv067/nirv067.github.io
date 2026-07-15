@@ -66,6 +66,21 @@ const experiences: Experience[] = [
     tech: ["React", "Next.js", "Node.js", "PostgreSQL", "Redis", "ElasticSearch", "PHP", "Angular", "Docker"],
   },
   {
+    company: "Edustoke",
+    role: "Senior Software Engineer",
+    period: "Dec 2017 – Apr 2020 · 2 yr 5 mo",
+    location: "Gurugram, India",
+    summary:
+      "Built and maintained backend services and APIs for Edustoke's core platform, working closely with frontend teams before stepping into the Technical Lead role.",
+    bullets: [
+      "Built and maintained backend services and APIs supporting core platform features used across counselor, lead-verification, and finance workflows.",
+      "Worked closely with frontend teams to deliver end-to-end features from API design through UI integration.",
+      "Integrated third-party services and managed data flows across systems supporting day-to-day platform operations.",
+      "Gained hands-on exposure to production issues — performance bottlenecks, data inconsistencies, and operational constraints — building toward the system-ownership responsibilities of the later Technical Lead role.",
+    ],
+    tech: ["PHP", "Sails.js", "Angular", "MySQL", "JavaScript"],
+  },
+  {
     company: "BlackLight Studio Works Pvt. Ltd.",
     role: "Web Developer",
     period: "Dec 2016 – Dec 2017 · 1 yr 1 mo",
